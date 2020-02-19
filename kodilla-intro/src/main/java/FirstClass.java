@@ -16,6 +16,19 @@ public class FirstClass {
         heavyNotebook.checkWeight();
         oldNotebook.checkWeight();
 
+        int notebookWeight = notebook.getWeight();
+        System.out.println(notebookWeight);
+
+        LeapYear cyc = new LeapYear();
+        boolean dupa = cyc.leapYear(2020);
+        System.out.println(dupa);
+
+        dupa = cyc.leapYear(2016);
+        System.out.println(dupa);
+
+
+
+
 
 
     }
