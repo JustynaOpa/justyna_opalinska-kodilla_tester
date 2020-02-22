@@ -17,8 +17,9 @@ public class RandomNumbers {
         while(maxSum >= sum) {
             int nn = random.nextInt(bound);
             sum = sum + nn;
-            if(nn < minNn){
-                minNn = nn;
+            if(sum < minNn){
+                minNn = sum;
+                minNn++;
             }
         }
 
@@ -35,6 +36,7 @@ public class RandomNumbers {
             sum = sum + nn;
             if(nn > maxNn){
                 maxNn = nn;
+                maxNn++;
             }
         }
 
