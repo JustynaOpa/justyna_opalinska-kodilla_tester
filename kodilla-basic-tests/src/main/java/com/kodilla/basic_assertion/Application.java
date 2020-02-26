@@ -4,29 +4,29 @@ public class Application {
     public static void main(String[] args) {
 
         Calculator calculator = new Calculator();
-        int numberOne = 12;
-        int numberTwo = 6;
+        int a = 12;
+        int b = 6;
         int potega = 2;
-        double a = 12;
+        double ab = 12;
 
-        int sumResult =calculator.addition(numberOne,numberTwo);
+        int sumResult =calculator.sum(a,b);
         boolean correct = ResultChecker.assertEquals(18, sumResult);
         if(correct){
-            System.out.println("Metoda addition działa poprawnie dla liczb" + numberOne + "i" + numberTwo);
+            System.out.println("Metoda sum działa poprawnie dla liczb" + a + "i" + b);
         } else {
-            System.out.println("Metoda addition nie działa poprawnie dla liczb" + numberOne + "i" + numberTwo);
+            System.out.println("Metoda sum nie działa poprawnie dla liczb" + a + "i" + b);
 
         }
-        int subResult = calculator.substraction(numberOne,numberTwo);
+        int subResult = calculator.substract(a,b);
         boolean good = ResultChecker.assertEquals(6,subResult);
             if(good){
-                System.out.println("Metoda substraction is correct");
+                System.out.println("Metoda substract is correct");
             }else {
-                System.out.println("Metoda substraction is incorrect");
+                System.out.println("Metoda substract is incorrect");
             }
 
 
-            double expoR = calculator.exponentiation(potega, a);
+            double expoR = calculator.exponentiation(potega, ab);
             boolean ok = ResultChecker.assertEquals1(144, expoR);
                 if (ok) {
                     System.out.println("Metoda exponentiation jest poprawna");
