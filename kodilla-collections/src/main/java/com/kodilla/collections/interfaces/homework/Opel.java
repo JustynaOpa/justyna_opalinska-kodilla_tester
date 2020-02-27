@@ -14,7 +14,7 @@ public class Opel implements Car {
     }
     @Override
     public int getSpeed() {
-        speed = 75;
+
         speed = speed + (increase * 3) - (decrease * 2);
         return speed;
     }

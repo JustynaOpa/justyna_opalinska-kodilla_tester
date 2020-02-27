@@ -14,7 +14,7 @@ public class Kia implements Car {
 
     @Override
     public int getSpeed() {
-        speed = 70;
+
         speed = speed + (increase * 3) - (decrease * 2);
         return speed;
     }

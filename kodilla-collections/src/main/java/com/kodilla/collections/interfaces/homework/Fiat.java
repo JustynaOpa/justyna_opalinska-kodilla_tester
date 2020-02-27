@@ -13,7 +13,7 @@ public class Fiat implements Car {
 
 
     public int getSpeed() {
-        speed = 65;
+
         speed = speed + (increase * 3) - (decrease * 2);
 
         return speed;
