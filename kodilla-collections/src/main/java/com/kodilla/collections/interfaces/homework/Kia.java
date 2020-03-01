@@ -25,7 +25,7 @@ public class Kia implements Car {
     }
 
     @Override
-    public void decreaseSpeed() {
-        System.out.println(decrease);
+    public double decreaseSpeed() {
+        return decrease;
     }
 }

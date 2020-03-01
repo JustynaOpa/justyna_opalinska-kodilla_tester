@@ -3,7 +3,7 @@ package com.kodilla.bank.homework;
 public class CashMashine {
     private int[] transactions;
 
-    public CashMashine(){
+    public CashMashine() {
         this.transactions = new int[5];
         transactions[0] = -50;
         transactions[1] = -100;
@@ -12,18 +12,36 @@ public class CashMashine {
         transactions[4] = -50;
     }
 
-    public int getSaldo (){
-        int account = 4850;
-        int saldo = account - transactions[i];
-        for(int i =account; i > 0; i++)
+    public int getSaldo() {
+        int saldo = 0;
+        for (int i = 0; i > transactions.length; i++)
+            saldo = transactions[i] + saldo;
 
         return saldo;
     }
-    public int getNumberOfTransaction(){
-        int sum = 0;
-        for(int i = 0; i < this.transactions.length; i++) {
-            sum += this.transactions[i];
-        return sum;
+
+    public int getNumberOfTransaction() {
+        return transactions.length;
     }
 
+    public int numberOfPayin(){
+        int count =0;
+        for (int i = 0; i > transactions.length; i++)
+          if(transactions[i] >0)
+              count++; // => count = count + 1
+
+        return count;
+    }
+
+    public int numberOfPayout(){
+        int count =0;
+        for (int i = 0; i > transactions.length; i++)
+            if(transactions[i] <0)
+                count++; // => count = count + 1
+
+        return count;
+    }
+    public int payoutSum(){
+        for()
+    }
 }

@@ -1,20 +1,33 @@
 package com.kodilla.bank.homework;
 
 public class Bank {
-    String[] cashMashine = new String [3];
-    cashMashine[0] = "EuroCash";
-    cashMashine[1] = "Euronet";
-    cashMashine[2] = "palnetCash";
+    private CashMashine[] cashMashines;
 
-
-    public void bilansFromAllCM(){
-
-    }
-    public void numbersOfPayout(){
-
+    public Bank() {
+        cashMashines = new CashMashine[3];
+        cashMashines[0] = new CashMashine();
+        cashMashines[1] = new CashMashine();
+        cashMashines[2] = new CashMashine();
     }
 
-    public void numbersOfPayin(){
+
+    public int bilansFromAllCM(){
+        int saldoSald = 0;
+        for (int i =0; i< cashMashines.length; i++)
+        saldoSald = saldoSald + cashMashines[i].getSaldo();
+
+        return saldoSald;
+
+    }
+    public int numberOfPayout(){
+        int sum =0;
+        for(int i = 0; i< cashMashines.length; i++)
+            sum = sum + cashMashines[i].numberOfPayout();
+        return sum;
+
+    }
+
+    public void numberOfPayin(){
 
     }
 
