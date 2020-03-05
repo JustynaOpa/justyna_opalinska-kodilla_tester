@@ -14,7 +14,7 @@ public class CashMashine {
 
     public int getSaldo() {
         int saldo = 0;
-        for (int i = 0; i > transactions.length; i++)
+        for (int i = 0; i < transactions.length; i++)
             saldo = transactions[i] + saldo;
 
         return saldo;
@@ -24,24 +24,41 @@ public class CashMashine {
         return transactions.length;
     }
 
-    public int numberOfPayin(){
-        int count =0;
-        for (int i = 0; i > transactions.length; i++)
-          if(transactions[i] >0)
-              count++; // => count = count + 1
-
-        return count;
-    }
-
-    public int numberOfPayout(){
-        int count =0;
-        for (int i = 0; i > transactions.length; i++)
-            if(transactions[i] <0)
+    public int numberOfPayin() {
+        int count = 0;
+        for (int i = 0; i < transactions.length; i++)
+            if (transactions[i] > 0)
                 count++; // => count = count + 1
 
         return count;
     }
-    public int payoutSum(){
-        for()
+
+    public int numberOfPayout() {
+        int count = 0;
+        for (int i = 0; i < transactions.length; i++)
+            if (transactions[i] < 0)
+                count++; // => count = count + 1
+
+        return count;
+    }
+
+    public int payoutSum() {
+        int summ = 0;
+        for (int i = 0; i < transactions.length; i++)
+            if (transactions[i] < 0)
+            summ = summ + transactions[i];
+
+        return summ;
+
+    }
+
+    public int payinSum() {
+        int summ = 0;
+        for (int i = 0; i < transactions.length; i++)
+            if (transactions[i] > 0)
+            summ = summ + transactions[i];
+
+        return summ;
+
     }
 }

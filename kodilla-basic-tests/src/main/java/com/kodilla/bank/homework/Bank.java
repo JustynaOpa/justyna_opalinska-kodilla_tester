@@ -27,15 +27,29 @@ public class Bank {
 
     }
 
-    public void numberOfPayin(){
+    public int numberOfPayin(){
+        int sum =0;
+        for(int i = 0; i< cashMashines.length; i++)
+            sum = sum + cashMashines[i].numberOfPayin();
+        return sum;
 
     }
 
     public int getPayoutAverage(){
+        int average =0;
+        for(int i =0; i< cashMashines.length; i++)
+            average = average + cashMashines[i].payoutSum();
+            return average/numberOfPayout();
+
 
     }
 
     public int getPayinAverage(){
+        int average =0;
+        for(int i =0; i< cashMashines.length; i++ )
+            average = average + cashMashines[i].payinSum();
+        return average/numberOfPayin();
+
 
     }
 }
