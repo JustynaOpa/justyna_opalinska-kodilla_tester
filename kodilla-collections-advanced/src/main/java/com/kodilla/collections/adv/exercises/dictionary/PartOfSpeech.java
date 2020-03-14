@@ -1,6 +1,6 @@
 package com.kodilla.collections.adv.exercises.dictionary;
 
-public enum PartOfSpeach {
+public enum PartOfSpeech {
     NOUN,
     VERB,
     ADVERB,

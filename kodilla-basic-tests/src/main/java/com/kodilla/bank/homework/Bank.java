@@ -5,9 +5,7 @@ public class Bank {
 
     public Bank() {
         cashMashines = new CashMashine[3];
-        cashMashines[0] = new CashMashine();
-        cashMashines[1] = new CashMashine();
-        cashMashines[2] = new CashMashine();
+
     }
 
 

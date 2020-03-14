@@ -5,11 +5,15 @@ public class CashMashine {
 
     public CashMashine() {
         this.transactions = new int[5];
-        transactions[0] = -50;
+
+    }
+    public void add(int value){
+        transactions[0] = 900;
         transactions[1] = -100;
-        transactions[2] = -20;
-        transactions[3] = 200;
-        transactions[4] = -50;
+        transactions[2] = -50;
+        transactions[3] = -130;
+        transactions[4] = -20;
+
     }
 
     public int getSaldo() {
