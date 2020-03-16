@@ -8,11 +8,6 @@ public class CashMashine {
 
     }
     public void add(int value){
-        transactions[0] = 900;
-        transactions[1] = -100;
-        transactions[2] = -50;
-        transactions[3] = -130;
-        transactions[4] = -20;
 
     }
 

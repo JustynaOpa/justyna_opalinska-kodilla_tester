@@ -7,6 +7,9 @@ public class Bank {
         cashMashines = new CashMashine[3];
 
     }
+    public void add(int value){
+
+    }
 
 
     public int bilansFromAllCM(){

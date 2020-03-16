@@ -3,9 +3,9 @@ package com.kodilla.collections.adv.immutable.special.homework;
 public class BookApplication {
     public static void main(String[] args) {
 
-        BookManager a = new BookManager("Una", "Beck");
-        BookManager b = new BookManager("Baba", "Snack");
-        BookManager c = new BookManager("Una", "Beck");
+        BookManager a = new BookManager();
+        BookManager b = new BookManager();
+        BookManager c = new BookManager();
 
         System.out.println(a.equals(c));
         System.out.println(a.hashCode());

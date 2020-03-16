@@ -1,13 +1,12 @@
 package com.kodilla.collections.adv.exercises.homework;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class FlightRepository {
 
-    static void getFlightsTable(){
+    public static Map<String, List<Flight>> getFlightsTable(){
         Map<String, List<Flight>> flights = new HashMap<>();
 
         flights.put("one",new Flight( "Paris", "Madrid");
@@ -15,6 +14,10 @@ public class FlightRepository {
         flights.put("three", new Flight("Katowice", "Frankfurt");
         flights.put("four", new Flight("Frankfurt","New York");
         flights.put("five", new Flight("Frankfurt","Amsterdam");
+
+        return flights;
+
+
 
     }
 }
