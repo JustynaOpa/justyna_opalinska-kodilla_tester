@@ -1,7 +1,7 @@
 package com.kodilla.optional.homework;
 
 public class Student {
-    String name;
+    private String name;
     Teacher teacher;
 
     public Student(String name, Teacher teacher) {

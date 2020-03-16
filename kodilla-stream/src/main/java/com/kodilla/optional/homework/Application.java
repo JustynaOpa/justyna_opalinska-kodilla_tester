@@ -17,7 +17,7 @@ public class Application {
         students.add(new Student("Emma", teacher1));
 
         for( Student result: students)
-            System.out.println("Student: "+ result.name +" teacher: " + result.teacher);
+            System.out.println("Student: "+ result.getName() +" teacher: " + result.teacher);
 
         Student student= new Student("Adam", null);
         Optional<Student> optionalStudent = Optional.ofNullable(student);

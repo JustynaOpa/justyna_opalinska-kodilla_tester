@@ -9,20 +9,24 @@ public class FlightFinder {
     public List<Flight> findFlightsFrom(String departure) {
 
         List<Flight> result = new ArrayList<>();
-        for(FlightRepository fly: FlightRepository.getFlightsTable());
-
+        for (Flight flight : FlightRepository.getFlightsTable()) {
+            if (flight.getDeparture().equals(departure)) {
+                result.add(flight);
+            }
+        }
         return result;
 
     }
 
 
     public List<Flight> findFlightsTo(String arrival) {
-        String z = "Paris";
-        for (Flight fly : findFlightsTo(arrival)) {
-            if (arrival.equals(z)) {
-                System.out.println(fly.getArrival());
+        List<Flight> result = new ArrayList<>();
+        for (Flight flight : FlightRepository.getFlightsTable()) {
+            if (flight.getArrival().equals(arrival)) {
+                result.add(flight);
             }
         }
+        return result;
 
     }
 }
