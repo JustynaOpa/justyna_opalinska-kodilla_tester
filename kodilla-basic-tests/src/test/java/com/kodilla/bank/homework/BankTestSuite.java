@@ -9,10 +9,9 @@ public class BankTestSuite {
     @Test
     public void ShouldCalculateBillansFromAllCashMashines(){
         Bank bank = new Bank();
-        bank.add(600);
         bank.bilansFromAllCM();
         System.out.println(bank.bilansFromAllCM());
-        assertEquals(600, bank.bilansFromAllCM());
+        assertEquals(0, bank.bilansFromAllCM());
 
     }
     @Test
