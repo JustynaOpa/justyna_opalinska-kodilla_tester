@@ -11,7 +11,7 @@ public class BookApplication {
         System.out.println(a.hashCode());
         System.out.println(c.hashCode());
         System.out.println(a==c);
-
+        System.out.println("---------------");
         System.out.println(a.equals(b));
         System.out.println(a.hashCode());
         System.out.println(b.hashCode());

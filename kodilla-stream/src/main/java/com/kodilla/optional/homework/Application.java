@@ -1,29 +1,24 @@
 package com.kodilla.optional.homework;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
-        Teacher teacher1 = new Teacher("Adam Sand");
-        Teacher teacher2 = new Teacher("Eva Black");
 
         List<Student> students = new ArrayList<>();
-        students.add(new Student("Anna", teacher1));
-        students.add(new Student("John", teacher2));
-        students.add(new Student("Bill", null));
-        students.add(new Student("Ola", null));
-        students.add(new Student("Emma", teacher1));
-
-        for( Student result: students)
-            System.out.println("Student: "+ result.getName() +" teacher: " + result.teacher);
-
-        Student student= new Student("Adam", null);
-        Optional<Student> optionalStudent = Optional.ofNullable(student);
-        optionalStudent.ifPresent(u -> System.out.println(u.getTeacher()+" <undefined>"));
+        students.add(new Student("Anna", new Teacher("Adam Sand")));
+        students.add(new Student("John", new Teacher("Eva Black")));
+        students.add(new Student("Bill", new Teacher("")));
+        students.add(new Student("Ola", new Teacher("")));
+        students.add(new Student("Emma", new Teacher("Adam Sand")));
 
 
+        for (Student result : students) {
+            System.out.println("Student: " + result.getName() + " teacher: " + result.getTeacher());
 
+            Optional<List<Student>> optionalStudent = Optional.ofNullable(students);
+            optionalStudent.ifPresent(u -> System.out.println("Student: " + result.getName() + " teacher: <undefined> " ));
+
+        }
     }
 }
