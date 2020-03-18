@@ -2,10 +2,15 @@ package com.kodilla.collections.adv.immutable.special.homework;
 
 public class BookApplication {
     public static void main(String[] args) {
-
         BookManager a = new BookManager();
+        a.createBook("Una","Big");
+
         BookManager b = new BookManager();
+        b.createBook("Uno","Bag");
+
         BookManager c = new BookManager();
+        c.createBook("Una","Big");
+
 
         System.out.println(a.equals(c));
         System.out.println(a.hashCode());

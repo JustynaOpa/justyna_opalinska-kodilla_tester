@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Warehouse {
 
-    public static List<Order> getListOrder(){
+    public List<Order> getListOrder(){
         List<Order> orders = new ArrayList<>();
         return orders;
     }
@@ -18,10 +18,14 @@ public class Warehouse {
 
     }
     public Order getOrder(String number) throws OrderDoesntExistException {
-        Warehouse.getListOrder()
+        Order order = new Order(number);
+        return order;
+
+            Warehouse.getListOrder()
                 .stream()
-                .map(u -> u.getNumber())
+                .filter(u -> Boolean.parseBoolean(u.getNumber()))
                 .forEach(in-> System.out.println(in));
+
 
         throw new OrderDoesntExistException();
 
