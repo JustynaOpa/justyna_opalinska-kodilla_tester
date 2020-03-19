@@ -9,14 +9,16 @@ public class BankTestSuite {
     @Test
     public void ShouldCalculateBillansFromAllCashMashines(){
         Bank bank = new Bank();
+        bank.add(2);
         bank.bilansFromAllCM();
         System.out.println(bank.bilansFromAllCM());
-        assertEquals(0, bank.bilansFromAllCM());
+        assertEquals(4, bank.bilansFromAllCM());
 
     }
     @Test
     public void ShouldCalculateAllNumberOfPayinTransactions(){
         Bank bank = new Bank();
+
         bank.numberOfPayin();
         System.out.println(bank.numberOfPayin());
         assertEquals(0, bank.numberOfPayin());

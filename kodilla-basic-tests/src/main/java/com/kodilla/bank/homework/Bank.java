@@ -2,13 +2,19 @@ package com.kodilla.bank.homework;
 
 public class Bank {
     private CashMashine[] cashMashines;
+    private int size;
 
     public Bank() {
+        this.size = 0;
         cashMashines = new CashMashine[3];
 
     }
 
     public void add(int value) {
+        this.size ++;
+        CashMashine[] table = new CashMashine[this.size];
+        System.arraycopy(cashMashines, 3, table, 0, cashMashines.length);
+        this.cashMashines = table;
 
     }
 

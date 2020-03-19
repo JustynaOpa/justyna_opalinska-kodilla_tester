@@ -3,6 +3,7 @@ package com.kodilla.bank.homework;
 public class CashMashine {
     private int[] transactions;
 
+
     public CashMashine() {
         this.transactions = new int[5];
 
