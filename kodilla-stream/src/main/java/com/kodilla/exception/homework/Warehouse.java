@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Warehouse {
 
-    public List<Order> getListOrder(){
+    public List<Order> getOrderList(){
         List<Order> orders = new ArrayList<>();
         return orders;
     }
@@ -21,9 +21,9 @@ public class Warehouse {
         Order order = new Order(number);
         return order;
 
-            Warehouse.getListOrder()
+            Warehouse.getOrderList()
                 .stream()
-                .filter(u -> Boolean.parseBoolean(u.getNumber()))
+                .filter(n ->n.getNumber().isEmpty())
                 .forEach(in-> System.out.println(in));
 
 
