@@ -38,6 +38,7 @@ public class Bank {
 
     public int numberOfPayin() {
         int sum = 0;
+
         for (int i = 0; i < cashMashines.length; i++)
             sum = sum + cashMashines[i].numberOfPayin();
         return sum;
