@@ -8,18 +8,15 @@ public class Application {
         List<Student> students = new ArrayList<>();
         students.add(new Student("Anna", new Teacher("Adam Sand")));
         students.add(new Student("John", new Teacher("Eva Black")));
-        students.add(new Student("Bill", new Teacher(null)));
-        students.add(new Student("Ola", new Teacher(null)));
+        students.add(new Student("Bill", null));
+        students.add(new Student("Ola", null));
         students.add(new Student("Emma", new Teacher("Adam Sand")));
 
 
         for (Student result : students) {
-            Optional<List<Student>> optionalStudent = Optional.ofNullable(students);
-            optionalStudent.ifPresent(b->System.out.println("Student: " + result.getName() + " teacher: " + result.getTeacher().getName()));
+            Optional<Teacher> teacher = Optional.ofNullable(result.getTeacher());
+            System.out.println("Student name: "+ result.getName() + "Teacher name: " + teacher.orElse(new Teacher("<undefind>")).getName());
 
-            if (result.getTeacher().getName() == null) {
-                System.out.println("Student: " + result.getName() + " teacher: <undefined> ");
-            }
         }
 
     }
