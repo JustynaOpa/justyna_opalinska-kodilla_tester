@@ -9,6 +9,8 @@ public class CashMashine {
 
     }
     public void add(int value){
+        int[] tab = new int[transactions.length + value];
+        System.arraycopy(transactions, 0, tab, 0, transactions.length);
 
     }
 

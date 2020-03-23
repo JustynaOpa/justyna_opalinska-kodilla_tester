@@ -12,7 +12,7 @@ public class BankTestSuite {
         bank.add(2);
         bank.bilansFromAllCM();
         System.out.println(bank.bilansFromAllCM());
-        assertEquals(2, bank.bilansFromAllCM());
+        assertEquals(5, bank.bilansFromAllCM());
 
     }
     @Test

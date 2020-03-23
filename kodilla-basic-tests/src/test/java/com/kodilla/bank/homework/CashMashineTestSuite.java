@@ -10,14 +10,14 @@ public class CashMashineTestSuite {
     @Test
     public void ShouldCalculateSaldoIfTransactionIsCorrect() {
         CashMashine cashMashine = new CashMashine();
-        cashMashine.add(600);
-        cashMashine.add(-300);
+        cashMashine.add(6);
+        cashMashine.add(-2);
 
         int values = cashMashine.getSaldo();
 
         cashMashine.getSaldo();
         System.out.println(cashMashine.getSaldo());
-        assertEquals(600, cashMashine.getSaldo());
+        assertEquals(9, cashMashine.getSaldo());
 
     }
 
@@ -29,6 +29,7 @@ public class CashMashineTestSuite {
 
         cashMashine.getNumberOfTransaction();
         System.out.println(cashMashine.getNumberOfTransaction());
+        assertEquals(0, cashMashine.numberOfPayout());
 
 
     }
@@ -41,7 +42,7 @@ public class CashMashineTestSuite {
 
         cashMashine.numberOfPayin();
         System.out.println(cashMashine.numberOfPayin());
-        assertEquals(1, cashMashine.numberOfPayin());
+        assertEquals(0, cashMashine.numberOfPayin());
 
     }
 
@@ -53,7 +54,7 @@ public class CashMashineTestSuite {
 
         cashMashine.numberOfPayout();
         System.out.println(cashMashine.numberOfPayout());
-        assertEquals(4, cashMashine.numberOfPayout());
+        assertEquals(0, cashMashine.numberOfPayout());
 
     }
 
@@ -65,6 +66,7 @@ public class CashMashineTestSuite {
 
         cashMashine.payinSum();
         System.out.println(cashMashine.payinSum());
+        assertEquals(0, cashMashine.numberOfPayout());
 
     }
 
@@ -73,9 +75,11 @@ public class CashMashineTestSuite {
         CashMashine cashMashine = new CashMashine();
         cashMashine.add(600);
         cashMashine.add(-300);
+        cashMashine.add(-30);
 
         cashMashine.payoutSum();
         System.out.println(cashMashine.payoutSum());
+        assertEquals(-330, cashMashine.numberOfPayout());
 
     }
 

@@ -31,11 +31,5 @@ public class BookManager {
     }
 
 
-    public static boolean compare(Book book1, Book book2)
-    {
-        if(book1.getTitle().equals(book2.getTitle()) && book1.getAuthor().equals(book2.getAuthor()))
-            return true;
-        else
-            return false;
-    }
+
 }

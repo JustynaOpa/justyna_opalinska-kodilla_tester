@@ -2,21 +2,20 @@ package com.kodilla.bank.homework;
 
 public class Bank {
     private CashMashine[] cashMashines;
-//    private int size;
+
 
     public Bank() {
-//        this.size = 0;
+
         cashMashines = new CashMashine[3];
 
     }
 
 
     public void add(int value) {
-        if (value > 0) {
-            CashMashine[] table = new CashMashine[cashMashines.length + value];
-            System.arraycopy(cashMashines, 0, table, 0, cashMashines.length);
 
-        }
+        CashMashine[] table = new CashMashine[cashMashines.length + value];
+        System.arraycopy(cashMashines, 0, table, 0, cashMashines.length);
+
     }
 
 

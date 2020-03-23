@@ -27,7 +27,6 @@ public class Warehouse {
                 .collect(Collectors.toList());
 
         System.out.println(orders);
-
         throw new OrderDoesntExistException();
 
 
