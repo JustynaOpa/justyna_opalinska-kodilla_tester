@@ -10,9 +10,9 @@ public class WarehouseTestSuite {
         //given
         Warehouse warehouse = new Warehouse();
         //when
-        Order getOrder = warehouse.getOrder("A20");
+        Order result = warehouse.getOrder("A20");
         //then
-        assertEquals(getOrder,warehouse);
+        assertEquals(result,warehouse);
     }
 
 }

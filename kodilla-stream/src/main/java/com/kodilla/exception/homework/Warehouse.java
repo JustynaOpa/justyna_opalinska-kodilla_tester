@@ -20,14 +20,19 @@ public class Warehouse {
 
     public Order getOrder(String number) throws OrderDoesntExistException {
 
-        List<String> orders = getOrderList()
+        List<Order> orders = getOrderList()
                 .stream()
                 .filter(n -> n.getNumber().equals(number))
-                .map(u -> u.getNumber())
                 .collect(Collectors.toList());
+        if (getOrderList().isEmpty()) {
+            throw new OrderDoesntExistException();
+        }
+        for (Order order : orders){
+            System.out.println(order.number);
+        }
+        return orders.get(0);
 
-        System.out.println(orders);
-        throw new OrderDoesntExistException();
+
 
 
     }
