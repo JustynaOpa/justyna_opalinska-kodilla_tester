@@ -2,14 +2,14 @@ package com.kodilla.collections.adv.immutable.special.homework;
 
 public class BookApplication {
     public static void main(String[] args) {
-        BookManager a = new BookManager();
-        a.createBook("Una","Big");
+        BookManager bookManager = new BookManager();
 
-        BookManager b = new BookManager();
-        b.createBook("Uno","Bag");
+        Book a = bookManager.createBook("Una","Big");
 
-        BookManager c = new BookManager();
-        c.createBook("Una","Big");
+        Book b = new Book("Uno","Bag");
+        bookManager.createBook(b);
+
+        Book c = bookManager.createBook("Una","Big");
 
 
         System.out.println(a.equals(c));

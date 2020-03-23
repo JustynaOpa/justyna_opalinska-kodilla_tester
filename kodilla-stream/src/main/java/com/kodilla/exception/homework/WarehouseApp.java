@@ -13,8 +13,9 @@ public class WarehouseApp {
 
 
         try {
-           Order getOrder = warehouse.getOrder("A20");
-            System.out.println("Order status: " + getOrder);
+           Order result = warehouse.getOrder("A21");
+           if(result!= null)
+            System.out.println("Order status: " + result);
         } catch (OrderDoesntExistException e) {
             System.out.println("Sorry, this order is not in our base");
         }finally{

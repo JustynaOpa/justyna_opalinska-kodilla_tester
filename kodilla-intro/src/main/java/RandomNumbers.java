@@ -8,7 +8,7 @@ public class RandomNumbers {
 
     public RandomNumbers(int maxSum, int bound) {
         this.maxSum = maxSum;                   //konstruktor: przypisanie argumentów do zmiennych
-        this.bound = bound;-
+        this.bound = bound;
 
     }
 

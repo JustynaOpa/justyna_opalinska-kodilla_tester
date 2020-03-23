@@ -7,19 +7,35 @@ public class BookManager {
     Set<Book> books = new HashSet<>();
 
 
-    public Set<Book> createBook(String title, String author) {
-        Book book = new Book(title, author);
+    public Book createBook(Book newBook) {
+        return createBook(newBook.getTitle(), newBook.getAuthor());
+    }
 
-        Set<Book> create = new HashSet<>();
-        for (Book book1 : create) {
-            if (book1.equals(createBook(title, author)))
-                create.add(book);
+    public Book createBook(String title, String author) {
+        boolean alreadyIs = false;
+        Book newBook = null;
+
+        for (Book book : books) {
+            if(book.getAuthor().equals(author) && book.getTitle().equals(title)) {
+                alreadyIs = true;
+            }
         }
-            return create;
+
+        newBook = new Book(title, author);
+
+        if(alreadyIs == false) {
+            books.add(newBook);
+        }
+
+        return newBook;
+    }
 
 
-
-
-
+    public static boolean compare(Book book1, Book book2)
+    {
+        if(book1.getTitle().equals(book2.getTitle()) && book1.getAuthor().equals(book2.getAuthor()))
+            return true;
+        else
+            return false;
     }
 }

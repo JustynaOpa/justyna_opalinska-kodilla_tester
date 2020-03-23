@@ -7,25 +7,25 @@ import java.util.stream.Collectors;
 
 
 public class Warehouse {
+    List<Order> orders = new ArrayList<>();
 
     public List<Order> getOrderList() {
-        List<Order> orders = new ArrayList<>();
         return orders;
     }
 
     public void addOrder(Order order) {
-        List<Order> orders = new ArrayList<>();
         orders.add(order);
 
     }
 
     public Order getOrder(String number) throws OrderDoesntExistException {
 
-        List<Order> orders = Warehouse.getOrderList()
+        List<String> orders = getOrderList()
                 .stream()
                 .filter(n -> n.getNumber().equals(number))
-                .map(u-> u.getNumber())
+                .map(u -> u.getNumber())
                 .collect(Collectors.toList());
+
         System.out.println(orders);
 
         throw new OrderDoesntExistException();
