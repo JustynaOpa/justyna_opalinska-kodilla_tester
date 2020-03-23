@@ -12,7 +12,7 @@ public class WarehouseTestSuite {
         //when
         Order result = warehouse.getOrder("A20");
         //then
-        assertEquals(result,warehouse);
+        assertEquals(null, result);
     }
 
 }
