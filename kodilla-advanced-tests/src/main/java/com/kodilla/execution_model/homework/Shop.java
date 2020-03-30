@@ -32,7 +32,7 @@ public class Shop {
 
         double minValue = Integer.MAX_VALUE;
         for (Order value : orders) {
-            if (value.getOrderValue() > minValue) {
+            if (value.getOrderValue() < minValue) {
                 minValue = value.getOrderValue();
             }
         }
@@ -49,13 +49,14 @@ public class Shop {
         return maxValue;
    }
 
-    public Order getOrderDate() {
-        LocalDate date = null;
-        for (Order dates : orders){
-            dates.getDate().minusDays(-1);
-        return dates;
+    public List<Order> getOrdersBetween(LocalDate start, LocalDate end) {
+        List<Order> result = new ArrayList<>();
+        for (Order order : orders){
+            if (order.getDate().isAfter(start) && order.getDate().isBefore(end)){
+                result.add(order);
+            }
         }
-        return null;
+        return result;
     }
 
     public double sumValueOfOrders() {

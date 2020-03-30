@@ -22,5 +22,6 @@ public class GamblingMachineTestSuite {
         assertEquals(expected,gamblingMachine.howManyWins(numbers));
 
     }
+//4 metody - prawdziwe 6cyfr - mniejsze od 1- puste -
 
 }

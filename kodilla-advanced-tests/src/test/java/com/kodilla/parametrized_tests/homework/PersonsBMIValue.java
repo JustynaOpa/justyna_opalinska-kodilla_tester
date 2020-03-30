@@ -9,11 +9,11 @@ public class PersonsBMIValue {
 
     public static Stream<Arguments> provideValueForTesting(){
         return Stream.of(
-                Arguments.of(new Person(1.68, 38), 13.5),
-                Arguments.of(new Person(1.55, 60), 25.0),
-                Arguments.of(new Person(1.78, 138), 43.6),
-                Arguments.of(new Person(1.80, 102), 31.5),
-                Arguments.of(new Person(1.50, 40), 17.8)
+                Arguments.of(1.68, 38, "Very severely underweight"),
+                Arguments.of(1.55, 60, "Normal (healthy weight)"),
+                Arguments.of(1.78, 138, "Obese Class III (Very severely obese)"),
+                Arguments.of(1.80, 102, "Obese Class I (Moderately obese)"),
+                Arguments.of(1.50, 40, "Underweight")
         );
     }
 }
