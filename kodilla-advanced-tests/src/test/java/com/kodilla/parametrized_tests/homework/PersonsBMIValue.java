@@ -6,6 +6,7 @@ import java.util.stream.Stream;
 
 public class PersonsBMIValue {
 
+
     public static Stream<Arguments> provideValueForTesting(){
         return Stream.of(
                 Arguments.of(new Person(1.68, 38), 13.5),

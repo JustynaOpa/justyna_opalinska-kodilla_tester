@@ -10,77 +10,66 @@ public class CashMashineTestSuite {
     @Test
     public void ShouldCalculateSaldoIfTransactionIsCorrect() {
         CashMashine cashMashine = new CashMashine();
-        cashMashine.add(6);
-        cashMashine.add(-2);
+        cashMashine.addTransaction(600);
+        cashMashine.addTransaction(-200);
 
-        int values = cashMashine.getSaldo();
-
-        cashMashine.getSaldo();
         System.out.println(cashMashine.getSaldo());
-        assertEquals(9, cashMashine.getSaldo());
+        assertEquals(400, cashMashine.getSaldo());
 
     }
 
     @Test
     public void ShouldCalculateNumberOfTransactions() {
         CashMashine cashMashine = new CashMashine();
-        cashMashine.add(600);
-        cashMashine.add(-300);
+        cashMashine.addTransaction(600);
+        cashMashine.addTransaction(-300);
 
-        cashMashine.getNumberOfTransaction();
         System.out.println(cashMashine.getNumberOfTransaction());
-        assertEquals(0, cashMashine.numberOfPayout());
-
-
+        assertEquals(7, cashMashine.getNumberOfTransaction());
     }
 
     @Test
     public void ShouldCalculateNumberOfPayin() {
         CashMashine cashMashine = new CashMashine();
-        cashMashine.add(600);
-        cashMashine.add(-300);
+        cashMashine.addTransaction(600);
+        cashMashine.addTransaction(-300);
 
-        cashMashine.numberOfPayin();
         System.out.println(cashMashine.numberOfPayin());
-        assertEquals(0, cashMashine.numberOfPayin());
+        assertEquals(1, cashMashine.numberOfPayin());
 
     }
 
     @Test
     public void ShouldCalculateNumberOfPayout() {
         CashMashine cashMashine = new CashMashine();
-        cashMashine.add(600);
-        cashMashine.add(-300);
+        cashMashine.addTransaction(600);
+        cashMashine.addTransaction(-300);
 
         cashMashine.numberOfPayout();
         System.out.println(cashMashine.numberOfPayout());
-        assertEquals(0, cashMashine.numberOfPayout());
+        assertEquals(1, cashMashine.numberOfPayout());
 
     }
 
     @Test
     public void ShouldCalculateSumOfPayin() {
         CashMashine cashMashine = new CashMashine();
-        cashMashine.add(600);
-        cashMashine.add(-300);
+        cashMashine.addTransaction(600);
+        cashMashine.addTransaction(-300);
 
-        cashMashine.payinSum();
         System.out.println(cashMashine.payinSum());
-        assertEquals(0, cashMashine.numberOfPayout());
-
+        assertEquals(600, cashMashine.payinSum());
     }
 
     @Test
     public void ShouldCalculateSumOfPayout() {
         CashMashine cashMashine = new CashMashine();
-        cashMashine.add(600);
-        cashMashine.add(-300);
-        cashMashine.add(-30);
+        cashMashine.addTransaction(600);
+        cashMashine.addTransaction(-300);
+        cashMashine.addTransaction(-30);
 
-        cashMashine.payoutSum();
         System.out.println(cashMashine.payoutSum());
-        assertEquals(-330, cashMashine.numberOfPayout());
-
+        assertEquals(-330, cashMashine.payoutSum());
     }
 
 

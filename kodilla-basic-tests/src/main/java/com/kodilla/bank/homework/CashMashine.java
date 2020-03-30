@@ -8,9 +8,17 @@ public class CashMashine {
         this.transactions = new int[5];
 
     }
-    public void add(int value){
-        int[] tab = new int[transactions.length + value];
+
+    public void addTransaction(int value) { // Adds transaction with given value /value of transaction
+        // tymczasowa tablica
+        int[] tab = new int[transactions.length + 1];
+        //przepisanie wartosci ze starej tablicy do nowej
         System.arraycopy(transactions, 0, tab, 0, transactions.length);
+        // podmiana tablicy na ta ze zmieniona wiekoscia
+        transactions = tab;
+
+        // nadanie wartosci dodanej transakcji
+        transactions[transactions.length - 1] = value;
 
     }
 
@@ -48,7 +56,7 @@ public class CashMashine {
         int summ = 0;
         for (int i = 0; i < transactions.length; i++)
             if (transactions[i] < 0)
-            summ = summ + transactions[i];
+                summ = summ + transactions[i];
 
         return summ;
 
@@ -58,7 +66,7 @@ public class CashMashine {
         int summ = 0;
         for (int i = 0; i < transactions.length; i++)
             if (transactions[i] > 0)
-            summ = summ + transactions[i];
+                summ = summ + transactions[i];
 
         return summ;
 

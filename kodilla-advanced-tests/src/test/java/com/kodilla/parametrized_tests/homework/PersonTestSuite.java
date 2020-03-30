@@ -9,19 +9,21 @@ import java.util.stream.Collectors;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PersonTestSuite {
-
+    Person person = new Person(1.85,55);
 
     @ParameterizedTest
     @MethodSource(value = "com.kodilla.parametrized_tests.homework.PersonsBMIValue#provideValueForTesting")
     public void shouldCalculateBMI(double input, String expected){
 
+        expected = person.getBMI();
+
         List<String> result = PersonsBMIValue.provideValueForTesting()
-                .map(u->u.toString())
+                .map(t->t.toString())
                 .collect(Collectors.toList());
         System.out.println(result);
 
 
 
-        assertEquals(result, expected);
+        assertEquals(expected, input);
     }
 }

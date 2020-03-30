@@ -7,48 +7,49 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BankTestSuite {
 
     @Test
-    public void ShouldCalculateBillansFromAllCashMashines(){
+    public void ShouldCalculateBillansFromAllCashMashines() {
         Bank bank = new Bank();
-        bank.add(2);
-        bank.bilansFromAllCM();
+        bank.addCashMachine(2);
+
         System.out.println(bank.bilansFromAllCM());
-        assertEquals(5, bank.bilansFromAllCM());
-
+        assertEquals(0, bank.bilansFromAllCM());
     }
+
     @Test
-    public void ShouldCalculateAllNumberOfPayinTransactions(){
+    public void ShouldCalculateAllNumberOfPayinTransactions() {
         Bank bank = new Bank();
-        bank.add(1);
-        bank.numberOfPayin();
+        bank.addCashMachine(1);
+
         System.out.println(bank.numberOfPayin());
-        assertEquals(4, bank.numberOfPayin());
-
+        assertEquals(0, bank.numberOfPayin());
     }
+
     @Test
-    public void ShouldCalculateAllNumberOfPayoutTransactions(){
+    public void ShouldCalculateAllNumberOfPayoutTransactions() {
         Bank bank = new Bank();
-        bank.add(3);
+        bank.addCashMachine(3);
         bank.numberOfPayout();
         System.out.println(bank.numberOfPayout());
-        assertEquals(6, bank.numberOfPayout());
-
+        assertEquals(0, bank.numberOfPayout());
     }
+
     @Test
-    public void ShouldCalculateAverageOfPayinTransactions(){
+    public void ShouldCalculateAverageOfPayinTransactions() {
         Bank bank = new Bank();
-        bank.add(2);
-        bank.getPayinAverage();
+        bank.addCashMachine(2);
+        bank.getCashMashines()[0].addTransaction(100);
+
         System.out.println(bank.getPayinAverage());
-        assertEquals(5, bank.getPayinAverage());
-
+        assertEquals(100, bank.getPayinAverage());
     }
-    @Test
-    public void ShouldCalculateAverageOfPayoutTransactions(){
-        Bank bank = new Bank();
-        bank.add(1);
-        bank.getPayoutAverage();
-        System.out.println(bank.getPayoutAverage());
-        assertEquals(0, bank.getPayoutAverage());
 
+    @Test
+    public void ShouldCalculateAverageOfPayoutTransactions() {
+        Bank bank = new Bank();
+        bank.addCashMachine(1);
+        bank.getCashMashines()[0].addTransaction(-100);
+
+        System.out.println(bank.getPayoutAverage());
+        assertEquals(-100, bank.getPayoutAverage());
     }
 }
