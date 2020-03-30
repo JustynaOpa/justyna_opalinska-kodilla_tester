@@ -11,14 +11,11 @@ public class CashMashine {
 
     public void addTransaction(int value) { // Adds transaction with given value /value of transaction
         // tymczasowa tablica
-        int[] tab = new int[transactions.length + 1];
-        //przepisanie wartosci ze starej tablicy do nowej
-        System.arraycopy(transactions, 0, tab, 0, transactions.length);
-        // podmiana tablicy na ta ze zmieniona wiekoscia
+        int[] tab = new int[transactions.length + 1];//przepisanie wartosci ze starej tablicy do nowej
+        System.arraycopy(transactions, 0, tab, 0, transactions.length);// podmiana tablicy na ta ze zmieniona wiekoscia
         transactions = tab;
 
-        // nadanie wartosci dodanej transakcji
-        transactions[transactions.length - 1] = value;
+        transactions[transactions.length - 1] = value;// nadanie wartosci dodanej transakcji
 
     }
 
@@ -30,8 +27,12 @@ public class CashMashine {
         return saldo;
     }
 
-    public int getNumberOfTransaction() {
-        return transactions.length;
+    public int getNumberOfTransaction() { //zlicza wartości różne od zera
+        int result = 0;
+        for(int i = 0; i< transactions.length; i++)
+            if(transactions[i] !=0)
+                result++;
+        return result;
     }
 
     public int numberOfPayin() {

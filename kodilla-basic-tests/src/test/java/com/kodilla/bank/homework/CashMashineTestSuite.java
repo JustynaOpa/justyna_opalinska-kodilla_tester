@@ -25,7 +25,7 @@ public class CashMashineTestSuite {
         cashMashine.addTransaction(-300);
 
         System.out.println(cashMashine.getNumberOfTransaction());
-        assertEquals(7, cashMashine.getNumberOfTransaction());
+        assertEquals(2, cashMashine.getNumberOfTransaction());
     }
 
     @Test

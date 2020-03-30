@@ -49,14 +49,14 @@ public class Shop {
         return maxValue;
    }
 
-//    public Order getOrderDate() {
-//        LocalDate date = null;
-//        for (Order dates : orders){
-//            dates = date + dates.getDate();
-//        return dates;
-//        }
-//        return null;
- //   }
+    public Order getOrderDate() {
+        LocalDate date = null;
+        for (Order dates : orders){
+            dates.getDate().minusDays(-1);
+        return dates;
+        }
+        return null;
+    }
 
     public double sumValueOfOrders() {
         double sum = 0;
