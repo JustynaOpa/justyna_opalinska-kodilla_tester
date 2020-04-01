@@ -12,13 +12,13 @@ public class GamblingMachineTestSuite {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/usersNumbers.csv", numLinesToSkip = 1)
-    public void IsValidateNumberIsCorrect(Set<Integer> numbers, double expected) throws InvalidNumbersException{
+    public void IsValidateNumberIsCorrect(Set<Integer> numbers) throws InvalidNumbersException{
        assertEquals(6,gamblingMachine.howManyWins(numbers));
 
     }
     @ParameterizedTest
     @CsvFileSource(resources = "/usersNumbersFalse.csv", numLinesToSkip = 1)
-    public void IsValidateNumberIsIncorrect(Set<Integer> numbers, double expected) throws InvalidNumbersException{
+    public void IsValidateNumberIsIncorrect(Set<Integer> numbers, int expected) throws InvalidNumbersException{
         assertEquals(expected,gamblingMachine.howManyWins(numbers));
 
     }
