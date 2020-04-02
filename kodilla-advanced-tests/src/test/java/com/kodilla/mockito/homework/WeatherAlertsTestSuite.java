@@ -7,7 +7,6 @@ import com.kodilla.notification.Regimen;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import java.util.Set;
 
 public class WeatherAlertsTestSuite {
     WeatherAlerts weatherAlerts = new WeatherAlerts();
