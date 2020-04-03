@@ -9,34 +9,36 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 @SpringBootTest
 public class CalculatorTestSuite {
+    double a;
+    double b;
 
     @Test
     public void shouldReturnSumOfElements() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
         Calculator bean = context.getBean(Calculator.class);
-        double result = bean.add(15,3);
-        Assertions.assertEquals(18,result);
+        double result = bean.add(a,b);
+        Assertions.assertEquals(a+b,result);
     }
     @Test
     public void shouldReturnSubstractOfElements() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
         Calculator bean = context.getBean(Calculator.class);
-        double result = bean.subtract(15,3);
-        Assertions.assertEquals(12,result);
+        double result = bean.subtract(a,b);
+        Assertions.assertEquals(a-b,result);
     }
     @Test
     public void shouldReturnMultiplyOfElements() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
         Calculator bean = context.getBean(Calculator.class);
-        double result = bean.multiply(15,3);
-        Assertions.assertEquals(45,result);
+        double result = bean.multiply(a,b);
+        Assertions.assertEquals(a*b,result);
     }
     @Test
     public void shouldReturnDivideOfElements() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
         Calculator bean = context.getBean(Calculator.class);
-        double result = bean.divide(15,3);
-        Assertions.assertEquals(5,result);
+        double result = bean.divide(a,b);
+        Assertions.assertEquals(a/b,result);
     }
 
 
