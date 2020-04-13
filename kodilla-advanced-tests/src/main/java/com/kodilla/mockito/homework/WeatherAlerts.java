@@ -33,6 +33,6 @@ public class WeatherAlerts {
         this.clients.remove(client);
     }
     public void removeLocalisation(Localisation localisation){
-        this.clients.remove(localisation);
+        this.clients.forEach(client -> client.remove(localisation));
     }
 }

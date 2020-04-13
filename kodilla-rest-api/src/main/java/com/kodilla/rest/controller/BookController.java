@@ -4,7 +4,6 @@ import com.kodilla.rest.domain.BookDto;
 import com.kodilla.rest.service.BookService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -28,6 +27,9 @@ class BookController {
     @DeleteMapping
     public void removeBook(@RequestBody BookDto bookDto){
         bookService.removeBook(bookDto);
+    }
+    public int getSize(){
+        return bookService.getSize();
     }
 
 }

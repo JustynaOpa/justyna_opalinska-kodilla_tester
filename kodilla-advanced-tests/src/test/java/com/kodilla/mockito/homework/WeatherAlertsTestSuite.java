@@ -80,10 +80,12 @@ public class WeatherAlertsTestSuite {
     }
     @Test
     public void isPossibleRemoveLocalisation(){
+        weatherAlerts.addSubscriber(client);
         weatherAlerts.addLocalisation(localisation);
         weatherAlerts.removeLocalisation(localisation);
 
-        Mockito.verify(localisation, Mockito.never()).equals(localisation);
+        Mockito.verify(client, Mockito.times(1)).add(localisation);
+        Mockito.verify(client, Mockito.times(1)).remove(localisation);
 
     }
 

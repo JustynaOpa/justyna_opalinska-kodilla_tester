@@ -26,6 +26,7 @@ class DictionaryTestSuite {
         Dictionary dictionary = new Dictionary();
         dictionary.addWord("stos", new EnglishWord(PartOfSpeech.NOUN, "stack"));
         dictionary.addWord("gra", new EnglishWord(PartOfSpeech.NOUN, "play"));
+        dictionary.addWord("gra", new EnglishWord(PartOfSpeech.NOUN, "game"));
         dictionary.addWord("grać", new EnglishWord(PartOfSpeech.VERB, "play"));
         //when
         List<EnglishWord> result = dictionary.findEnglishWords("gra");
