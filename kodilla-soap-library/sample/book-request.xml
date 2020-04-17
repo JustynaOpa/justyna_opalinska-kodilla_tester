@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:kodilla="http://kodilla.com/books/soap_library">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <kodilla:getBookRequest>
+            <kodilla:index>Agatha Christie</kodilla:index>
+        </kodilla:getBookRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
+

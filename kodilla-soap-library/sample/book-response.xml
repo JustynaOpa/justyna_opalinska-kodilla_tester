@@ -1,0 +1,13 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <ns2:getBookResponse xmlns:ns2="http://kodilla.com/books/soap_library">
+            <ns2:book>
+                <ns2:title>Murder on the Orient Express</ns2:title>
+                <ns2:author>Agatha Christie</ns2:author>
+                <ns2:yearOfPublication>2013</ns2:yearOfPublication>
+                <ns2:typeOfBook>CRIME</ns2:typeOfBook>
+            </ns2:book>
+        </ns2:getBookResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
