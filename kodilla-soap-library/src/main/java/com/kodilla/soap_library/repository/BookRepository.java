@@ -50,7 +50,7 @@ public class BookRepository {
 
         books.put(bookAlter.getAuthor(), bookAlter);
     }
-    public Book findBook(String index){
+    public Book findBook(String index){ //wywołanie po indeksie
         Assert.notNull(index, "You have to specify the author's name");
         return books.get(index);
     }
