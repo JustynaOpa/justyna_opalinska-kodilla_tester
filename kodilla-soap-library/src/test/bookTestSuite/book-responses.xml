@@ -1,0 +1,65 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <ns2:getBookResponse xmlns:ns2="http://kodilla.com/books/soap_library">
+            <ns2:book>
+                <ns2:title>The Lord Of The Rings</ns2:title>
+                <ns2:author>J.R.R. Tolkien</ns2:author>
+                <ns2:yearOfPublication>1954</ns2:yearOfPublication>
+                <ns2:typeOfBook>FANTASY</ns2:typeOfBook>
+            </ns2:book>
+        </ns2:getBookResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<SOAP-ENV:Header/>
+<SOAP-ENV:Body>
+    <ns2:getBookResponse xmlns:ns2="http://kodilla.com/books/soap_library">
+        <ns2:book>
+            <ns2:title>Proxima</ns2:title>
+            <ns2:author>Stephen Baxter</ns2:author>
+            <ns2:yearOfPublication>2018</ns2:yearOfPublication>
+            <ns2:typeOfBook>SCI-FI</ns2:typeOfBook>
+        </ns2:book>
+    </ns2:getBookResponse>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<SOAP-ENV:Header/>
+<SOAP-ENV:Body>
+    <ns2:getBookResponse xmlns:ns2="http://kodilla.com/books/soap_library">
+        <ns2:book>
+            <ns2:title>Irresistible</ns2:title>
+            <ns2:author>Adam Alter</ns2:author>
+            <ns2:yearOfPublication>2015</ns2:yearOfPublication>
+            <ns2:typeOfBook>TECH</ns2:typeOfBook>
+        </ns2:book>
+    </ns2:getBookResponse>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<SOAP-ENV:Header/>
+<SOAP-ENV:Body>
+    <ns2:getBookResponse xmlns:ns2="http://kodilla.com/books/soap_library">
+        <ns2:book>
+            <ns2:title>Murder on the Orient Express</ns2:title>
+            <ns2:author>Agatha Christie</ns2:author>
+            <ns2:yearOfPublication>2013</ns2:yearOfPublication>
+            <ns2:typeOfBook>CRIME</ns2:typeOfBook>
+        </ns2:book>
+    </ns2:getBookResponse>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<SOAP-ENV:Header/>
+<SOAP-ENV:Body>
+    <ns2:getBookResponse xmlns:ns2="http://kodilla.com/books/soap_library"/>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+

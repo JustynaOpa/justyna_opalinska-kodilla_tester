@@ -1,0 +1,44 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://kodilla.com/books/soap_library">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <soap:getBookRequest>
+            <soap:index>J.R.R. Tolkien</soap:index>
+        </soap:getBookRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://kodilla.com/books/soap_library">
+<soapenv:Header/>
+<soapenv:Body>
+    <soap:getBookRequest>
+        <soap:index>Stephen Baxter</soap:index>
+    </soap:getBookRequest>
+</soapenv:Body>
+</soapenv:Envelope>
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://kodilla.com/books/soap_library">
+<soapenv:Header/>
+<soapenv:Body>
+    <soap:getBookRequest>
+        <soap:index>Adam Alter</soap:index>
+    </soap:getBookRequest>
+</soapenv:Body>
+</soapenv:Envelope>
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://kodilla.com/books/soap_library">
+<soapenv:Header/>
+<soapenv:Body>
+    <soap:getBookRequest>
+        <soap:index>Agatha Christie</soap:index>
+    </soap:getBookRequest>
+</soapenv:Body>
+</soapenv:Envelope>
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://kodilla.com/books/soap_library">
+<soapenv:Header/>
+<soapenv:Body>
+    <soap:getBookRequest>
+        <soap:index>Adam Sandler</soap:index>
+    </soap:getBookRequest>
+</soapenv:Body>
+</soapenv:Envelope>
