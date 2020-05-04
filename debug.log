@@ -1,0 +1,3 @@
+[0501/223059.574:ERROR:process_reader_win.cc(151)] SuspendThread: Odmowa dostêpu. (0x5)
+[0501/223059.575:ERROR:exception_snapshot_win.cc(98)] thread ID 14452 not found in process
+[0501/223059.576:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Podjêto próbê uzyskania dostêpu do procesu koñcz¹cego dzia³anie. (0xc000010a)
