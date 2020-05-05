@@ -1,9 +1,6 @@
 package com.kodilla.selenium.allegro;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -13,21 +10,19 @@ public class AllegroTestingApp {
         WebDriver driver = new ChromeDriver();
         driver.get("https://allegro.pl");
 
-        WebElement img = driver.findElement(By.xpath("//*[@aria-labelledby=\"dialog-title\"]/button/img"));
+        while (!driver.findElement(By.xpath("//*[@data-box-name=\"allegro.rodoConsentModal\"]/div/div/div/button")).isDisplayed()) {
+        }
+
+        WebElement img = driver.findElement(By.xpath("//*[@data-box-name=\"allegro.rodoConsentModal\"]/div/div/div/button"));
         img.click();
 
-        WebElement inputF = driver.findElement(By.xpath("//*[@data-box-name=\"allegro.metrumHeader.search\"]/div/form/input"));
+        WebElement comboAlle = driver.findElement(By.xpath("//*[@class=\"_1h7wt _d25db_UtYE1\"]/div[2]/div/select"));
+        Select eleSelect = new Select(comboAlle);
+        eleSelect.selectByIndex(3);
+
+        WebElement inputF = driver.findElement(By.xpath("//*[@class=\"_1h7wt _d25db_UtYE1\"]/input"));
         inputF.sendKeys("Mavic mini");
-        inputF.submit();
-
-//        WebElement comboAlle = driver.findElement(By.xpath("//*[@class=\"_d25gb_3KhYP _1sy4e _1mfty _1fwki _18vat\"]/span/div/select"));
-//        Select eleSelect = new Select(comboAlle);
-//        eleSelect.selectByValue("/kategoria/elektronika");
-
-        WebElement enter = driver.findElement(By.xpath("//*[@class=\"_1t7v4 _475cu _7qi4 _fee54_02svT\"]/div/div/form/button"));
-        enter.click();
-
-
+        inputF.sendKeys(Keys.DOWN, Keys.RETURN);
 
 
     }
