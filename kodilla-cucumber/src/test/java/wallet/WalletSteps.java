@@ -33,12 +33,20 @@ public class WalletSteps implements En {
         When("I request $110", () -> {
             Teller teller = new Teller(cashSlot);
             teller.withdraw(wallet,110);
+
+        });
+        When("I request $99", () -> {
+            Teller teller = new Teller(cashSlot);
             teller.withdraw(wallet,99);
         });
 
         Then("Nothing should be dispensed, operation impossible", () -> {
             Teller teller = new Teller(cashSlot);
             Assert.assertEquals(0, teller.checkerValue());
+
+        });
+        Then("$99 should be dispensed", () -> {
+            Teller teller = new Teller(cashSlot);
             Assert.assertEquals(99, teller.checkerValue());
         });
     }
