@@ -46,7 +46,7 @@ public class ItIsNumberSteps implements En {
             this.answer = divisibleChecker.checkIfDivisible(this.number);
         });
 
-        Then("I should be told {string}", (String string) -> {
+        Then("I should be {string}", (String string) -> {
             Assert.assertEquals(string, this.answer);
         });
     }
