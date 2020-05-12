@@ -7,6 +7,7 @@ public class WalletSteps implements En {
 
     private Wallet wallet = new Wallet();
     private CashSlot cashSlot = new CashSlot();
+    private Teller teller = new Teller(cashSlot);
 
     public WalletSteps(){
         Given("I have deposited $200 in my wallet", () -> {
@@ -15,13 +16,15 @@ public class WalletSteps implements En {
         });
 
         When("I request $30", () -> {
-            Teller teller = new Teller(cashSlot);
             teller.withdraw(wallet, 30);
-
         });
 
         Then("$30 should be dispensed", () -> {
            Assert.assertEquals(30,cashSlot.getContents());
+        });
+
+        Then("the balance of my wallet should be $170", () -> {
+            Assert.assertEquals("Incorrect wallet balance", 170, wallet.getBalance());
         });
 
         // Scenario 2 i 3
@@ -31,23 +34,19 @@ public class WalletSteps implements En {
         });
 
         When("I request $110", () -> {
-            Teller teller = new Teller(cashSlot);
             teller.withdraw(wallet,110);
 
         });
         When("I request $99", () -> {
-            Teller teller = new Teller(cashSlot);
             teller.withdraw(wallet,99);
         });
 
-        Then("Nothing should be dispensed, operation impossible", () -> {
-            Teller teller = new Teller(cashSlot);
-            Assert.assertEquals(0, teller.checkerValue());
+        Then("Nothing should be dispensed", () -> {
+            Assert.assertEquals("Incorrect action",100, wallet.getBalance());
 
         });
         Then("$99 should be dispensed", () -> {
-            Teller teller = new Teller(cashSlot);
-            Assert.assertEquals(99, teller.checkerValue());
+            Assert.assertEquals("Incorrect action",1, wallet.getBalance());
         });
     }
 }

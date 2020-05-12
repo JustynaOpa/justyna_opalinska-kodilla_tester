@@ -11,7 +11,7 @@ public class OcularExample {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.gecko.driver", "c:\\Selenium-drivers\\Firefox\\geckodriver.exe");
         WebDriver webDriver = new FirefoxDriver();
-        Thread.sleep(10000);
+
 
         Ocular.config()
                 .resultPath(Paths.get("c:\\Selenium-drivers\\results"))
@@ -21,8 +21,10 @@ public class OcularExample {
 
         WorldTimePage page = new WorldTimePage(webDriver);
         page.open();
-        page.close();
+        Thread.sleep(20000);
         page.compare();
+        page.close();
+
 
     }
 
