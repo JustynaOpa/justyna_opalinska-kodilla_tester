@@ -2,6 +2,7 @@ package com.kodilla.hibernate.tasklist.repository;
 
 import com.kodilla.hibernate.tasklist.TaskList;
 import org.junit.Assert;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,6 +18,7 @@ public class TaskListRepositoryTestSuite {
 
     private static final String LISTNAME = "Testing";
 
+    @Test
     public void testFindByListName(){
         //given
         TaskList taskList = new TaskList(LISTNAME, "First task list");
@@ -30,7 +32,7 @@ public class TaskListRepositoryTestSuite {
         Assert.assertEquals(1,readTaskList.size());
 
         //cleanUp
-        String id = readTaskList.get(0).getListName();
-        taskListRepository.deleteById(id);
+
+        taskListRepository.deleteAll();
     }
 }
