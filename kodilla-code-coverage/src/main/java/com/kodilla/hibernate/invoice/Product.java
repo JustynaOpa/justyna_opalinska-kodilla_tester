@@ -1,15 +1,16 @@
 package com.kodilla.hibernate.invoice;
 
-import com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX2RTFDTM;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "PRODUCTS")
 public class Product {
     private int id;
     private String name;
+    private List<Item> item = new ArrayList<>();
 
     public Product(){
     }
@@ -29,6 +30,20 @@ public class Product {
     @Column(name = "PRODUCT_NAME")
     public String getName(){
         return name;
+    }
+    @OneToMany(
+            targetEntity = Item.class,
+            mappedBy = "product",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
+    @Column(name = "ITEM")
+    public List<Item> item(){
+        return item;
+    }
+
+    public void setItem(List<Item> item){
+        this.item = item;
     }
 
     private void setId(int id){
