@@ -29,6 +29,9 @@ public class BookManager {
 
         return newBook;
     }
+    public int size(){
+        return books.size();
+    }
 
 
 

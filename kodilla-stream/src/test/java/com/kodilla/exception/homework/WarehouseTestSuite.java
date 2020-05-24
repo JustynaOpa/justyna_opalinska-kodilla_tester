@@ -1,6 +1,9 @@
 package com.kodilla.exception.homework;
 
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -14,5 +17,10 @@ public class WarehouseTestSuite {
         //then
         assertEquals(null, result);
     }
-
+    @Test
+    public void testGetOrderList(){
+        Warehouse warehouse = new Warehouse();
+        List<Order> list = warehouse.getOrderList();
+        Assert.assertEquals(warehouse.orders,list);
+    }
 }

@@ -9,8 +9,8 @@ public class Calculator {
     public int substract(int a, int b){
         return a-b;
     }
-    public double exponentiation(int potega, double ab){
-        double result =Math.pow(ab,potega);
+    public double exponentiation(double a, double b){
+        double result =Math.pow(a,b);
         return result;
     }
 
